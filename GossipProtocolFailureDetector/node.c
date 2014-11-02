@@ -1,15 +1,15 @@
 /**********************
 *
-* Progam Name: MP1. Membership Protocol
+* Progam Name: Gossip Style Membership Protocol
 * 
 * Code authors: Yogesh Rane
 *
-* Current file: mp1_node.c
+* Current file: node.c
 * About this file: Member Node Implementation
 * 
 ***********************/
 
-#include "mp1_node.h"
+#include "node.h"
 #include "emulnet.h"
 #include "MPtemplate.h"
 #include "log.h"

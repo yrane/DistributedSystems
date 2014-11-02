@@ -1,6 +1,6 @@
 /**********************
 *
-* Progam Name: MP1. Membership Protocol.
+* Progam Name: Gossip Style Membership Protocol
 * 
 * Current file: emulnet.h
 * About this file: Header file.

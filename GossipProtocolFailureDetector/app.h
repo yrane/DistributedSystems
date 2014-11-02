@@ -1,6 +1,6 @@
 /**********************
 *
-* Progam Name: MP1. Membership Protocol
+* Progam Name: Gossip Style Membership Protocol
 *
 * Current file: app.h
 * About this file: Header file.
@@ -10,7 +10,7 @@
 #ifndef _APP_H_
 #define _APP_H_
 
-#include "mp1_node.h"
+#include "node.h"
 
 /* DO NOT group[] ACCESS FROM INSIDE MP_NODE.C */
 member *group;

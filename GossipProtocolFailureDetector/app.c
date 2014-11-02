@@ -1,6 +1,6 @@
 /**********************
 *
-* Progam Name: MP1. Membership Protocol
+* Progam Name: Gossip Style Membership Protocol
 *
 * Current file: app.c
 * About this file: App (Application) Layer. Main simulator loop ( main() ).
