@@ -1,0 +1,20 @@
+This is one point where data is created:
+msg->msgtype=JOINREQ; 
+memcpy((char *)(msg+1), &node->addr, sizeof(address)); 
+memcpy((char *)(msg+1)+sizeof(address), &node->heartbeat, sizeof(long)); 
+
+When reading data, you redo this steps in opposite direction.
+
+
+
+msghdr is the message type and pktdata contains the real message (it contains information about who sent the message, to which node, and whatever other data you need in char* format)
+
+In Process_joinreq you will have to save the new node's information, send the "table" (all the other nodes info, (timestamp, heartbeat)) back to this new node and add the new node to the member list.
+ 
+In Process_joinrep, the node receives the member list from the introducer and needs to add the list to its own table.
+
+
+You can add new message handlers in STDCLLBKARGS and yes, you will have to add new functions similar to Process_joinrep for all message handlers you want to define. 
+
+I saw the addresses are currently generated within the range of the total number of members in the group. Is this true always? Do I need to create a separate field for peer ID for each entry in the membership list since they might be replaced by some random number ?
+Yes
